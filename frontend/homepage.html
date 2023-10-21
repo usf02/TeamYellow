@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Options</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Service Options</h1>
+    </header>
+    <div class="banner">
+        <img src="banner-image.jpg" alt="Banner Image">
+    </div>
+    <div class="container">
+        <div class="service-option">
+            <h2>Service Option 1</h2>
+            <p>Service description goes here.</p>
+        </div>
+        <div class="service-option">
+            <h2>Service Option 2</h2>
+            <p>Service description goes here.</p>
+        </div>
+        <div class="service-option">
+            <h2>Service Option 3</h2>
+            <p>Service description goes here.</p>
+        </div>
+    </div>
+    <form id="userForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameError" class="error"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+        </div>
+        <button type="button" onclick="submitForm()">login</button>
+    </form>
+</body>
+</html>

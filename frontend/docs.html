@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo">
+            <h1>File Upload</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Upload Documents</h2>
+        <form id="uploadForm">
+            <div class="form-group">
+                <label for="pdfFiles">Upload PDF Files:</label>
+                <input type="file" id="pdfFiles" name="pdfFiles" accept=".pdf" multiple>
+            </div>
+            <div class="form-group">
+                <label for="jpgFiles">Upload JPG Files:</label>
+                <input type="file" id="jpgFiles" name="jpgFiles" accept=".jpg" multiple>
+            </div>
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+    </div>
+    <div id="message"></div>
+    <script src="script2.js"></script>
+</body>
+</html>
