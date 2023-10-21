@@ -1,10 +1,10 @@
 <html>
 <header>
-    <title>Test page</title>
+    <title>New user page</title>
 </header>
 
 <body>
-    <div>LOGIN</div>
+    <div>CREATE NEW USER</div>
     <div><span>Last update: </span><span id="time-container"></span></div>
     <div>
         <label for="username">username:</label>
@@ -13,13 +13,11 @@
     <div>
         <label for="pass-input">password:</label>
         <input type="text" id="pass-input">
-        <button onclick="sendData()">Login</button>
     </div>
     <div>
-        <a href="newUser.html">
-            <button>New account</button>
-        </a>
-        
+        <label for="re-pass-input">reenter password:</label>
+        <input type="text" id="re-pass-input">
+        <button onclick="sendData()">Create</button>
     </div>
     <div>
         <div id="sent-data-container"></div>
