@@ -5,9 +5,9 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-idCounter = 6
+idDict = {"idCounter" : 5}
 
-def getCurrentID():
+def getCurrentID(idCounter):
     idCounter = idCounter + 1
     return idCounter
 
@@ -41,8 +41,10 @@ def users():
             json.dump(data, f)  # serializing back to the original file
         return data
     if request.method == "POST":
-        currentID = getCurrentID() 
+        #currentID = "id" + str(getCurrentID(idDict["idCounter"])) #currentID and idCounter somehow work if it uses a dictionary
+        #print(f"currID: {currentID}")
         received_data = request.get_json()
+        currentID = list(received_data.keys())[0]
         print(f"received data: {received_data}")
         message = received_data[currentID]
         return_data = {
@@ -53,9 +55,10 @@ def users():
         # saving sent data to json
         with open("users.json", "r") as f:  # reading a file
             data = json.load(f)  # deserialization
-
-        data[currentID] = message  # modifying the python object
-        idCounter += 1 # increment
+        print(f"data: {data}")
+        print(f"recdata: {received_data}")
+        data[currentID] = received_data[currentID] #message  # modifying the python object
+        #idCounter += 1 # increment
         with open("users.json", "w") as f:
             json.dump(data, f)  # serializing back to the original file
 
