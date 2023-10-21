@@ -1,42 +1,109 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Service Options</title>
-    <link rel="stylesheet" type="text/css" href="styles2.css">
-</head>
-<body>
-    <header>
-        <h1>Service Options</h1>
-    </header>
-    <div class="banner">
-        <img src="banner-image.jpg" alt="Banner Image">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading">Get It Done.</h1>
+        <h1 class="hero__heading">No Appointments.</h1>
+        <h1 class="hero__heading">From The Comfort Of Your Home.</h1>
+      </div>
     </div>
-    <div class="container">
-        <div class="service-option">
-            <h2>Service Option 1</h2>
-            <p>Service description goes here.</p>
+
+    <!-- Services Section -->
+    <div class="services" id="services">
+      <h1>Available Services</h1>
+      <div class="services__wrapper">
+        <div class="services__card">
+          <h2>ID Renewal</h2>
+          <ul>
+            <li>Fill up the form and submit it to us.</li>
+            <li>We will then send you a confirmation email with your ID renewal date.</li>
+          </ul>
         </div>
-        <div class="service-option">
-            <h2>Service Option 2</h2>
-            <p>Service description goes here.</p>
+        <div class="services__card">
+          <h2>Residence Registration</h2>
+          <ul>
+            <li>Fill up the form and submit it to us.</li>
+            <li>We will then send you a confirmation email with your ID renewal date.</li>
+          </ul>
         </div>
-        <div class="service-option">
-            <h2>Service Option 3</h2>
-            <p>Service description goes here.</p>
+        <div class="services__card">
+          <h2>Passport Renewal</h2>
+          <ul>
+            <li>Fill up the form and submit it to us.</li>
+            <li>We will then send you a confirmation email with your ID renewal date.</li>
+          </ul>
         </div>
+      </div>
+      <button class="main__btn">Upload Documents</button>
     </div>
-    <form id="userForm">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <div id="usernameError" class="error"></div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+            <a href="/">Careers</a> <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+            <a href="/">Destinations</a>
+          </div>
         </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <div id="passwordError" class="error"></div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+            <a href="/">Agency</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a> <a href="/">Facebook</a>
+            <a href="/">Youtube</a> <a href="/">Twitter</a>
+          </div>
         </div>
-        <button type="button" onclick="submitForm()">login</button>
-    </form>
-</body>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo">COLOR</a>
+          </div>
+          <p class="website__rights">© COLOR 2020. All rights reserved</p>
+          <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
