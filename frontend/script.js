@@ -38,6 +38,9 @@ function submitForm() {
             password: password
         };
 
+        // move to new page only if all is valid
+        window.location.href = "docs.html";
+
         // Send the data to the backend (Python server) using fetch
         fetch('/createUser', {
             method: 'POST',
@@ -57,5 +60,31 @@ function submitForm() {
             console.error(error);
             document.getElementById("message").innerText = "An error occurred while processing your request.";
         });
+
+        
     }
+}
+
+function checkLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    console.log("in check");
+
+    let isValid = false;
+    console.log(username);
+    console.log(username.length);
+
+    // Check username
+    if (username.length < 3 || password.length < 6) {
+        console.log("Please enter");
+        console.log(username, password);
+        console.log("user"+username.length);
+        isValid = false;
+    } else {
+        isValid = true;
+        window.location.href = "docs.html";
+    }
+
+    
+
 }

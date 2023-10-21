@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import os
+import json
 
 app = Flask(__name__)
 
@@ -77,4 +78,4 @@ def create_user():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run("localhost", 5000)
