@@ -32,6 +32,7 @@
 </body>
 <script>
     var xhr = null;
+    currID = 5;
 
     getXmlHttpRequestObject = function () {
         if (!xhr) {
@@ -95,8 +96,14 @@
         xhr.open("POST", "http://localhost:6969/users", true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         // Send the request over the network
-        xhr.send(JSON.stringify({"id5": {"username": usernameToSend, "password": passToSend}}));
+        currID++;
+        userID = "id" + currID;
+        console.log(currID, userID);
+        //localStorage.currID2++;
+        //console.log("local"+localStorage.currID2);
+        xhr.send(JSON.stringify({[userID]: {"username": usernameToSend, "password": passToSend}}));
     }
+    console.log(currID);
 </script>
 
 </html>
