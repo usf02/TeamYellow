@@ -102,7 +102,7 @@
     display: none;
   }
 
-  label {
+  label [for="pdfFiles"] [for="jpgFiles"] {
     background-color: #465e9b9c;
     color: #130e01;
     padding: 10px 20px;
@@ -125,8 +125,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #130e01;
-    background: #465e9b9c;
+    color: #fffaeb;
+    background: #35332f;
     transition: 0.3s ease-in;
   }
 
@@ -148,7 +148,7 @@
 
   .main__btn {
     font-size: 1.8rem;
-    background: #acac53;
+    background: #59899b;
     padding: 20px 60px;
     border: none;
     border-radius: 70px;
@@ -199,12 +199,26 @@
   
   /* Footer CSS */
   .footer__container {
-    background-color: #131313;
+    background-color: #130e01;
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .header__container {
+    background-color: #130e01;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .header__logo {
+    margin-left: 110px;
   }
   
   #footer__logo {
