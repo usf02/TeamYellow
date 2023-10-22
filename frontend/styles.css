@@ -159,6 +159,10 @@
     outline: none;
   }
 
+  .main__btn a:hover {
+    color: #fff;
+  }
+
   .main__btn:hover {
     color: #fff;
   }
@@ -179,6 +183,18 @@
     .services__wrapper {
       grid-template-columns: 1fr;
     }
+  }
+
+  .services input {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+  .services label {
+    font-size: 30px;
   }
   
   /* Footer CSS */
