@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        console.log(pdfFiles);
+
         // Prepare the FormData object to send the files
         const formData = new FormData();
         for (let i = 0; i < pdfFiles.length; i++) {
@@ -22,8 +24,34 @@ document.addEventListener("DOMContentLoaded", function () {
             formData.append("jpgFiles", jpgFiles[i]);
         }
 
-        // Send the data to the server (you would need a server-side script to handle the file uploads)
-        // Example: fetch('/upload', { method: 'POST', body: formData })
-        // Replace '/upload' with the actual server endpoint to handle file uploads
+
     });
 });
+
+/*const form = document.querySelector('form');
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+    const form = event.currentTarget;
+    const url = new URL(form.action);
+    const formData = new FormData(form);
+    const searchParams = new URLSearchParams(formData);
+  
+    const fetchOptions = {
+      method: form.method,
+    };
+  
+    if (form.method.toLowerCase() === 'post') {
+      if (form.enctype === 'multipart/form-data') {
+        fetchOptions.body = formData;
+      } else {
+        fetchOptions.body = searchParams;
+      }
+    } else {
+      url.search = searchParams;
+    }
+  
+    fetch(url, fetchOptions);
+  
+    event.preventDefault();
+  }*/

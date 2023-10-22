@@ -63,6 +63,31 @@ def users():
             json.dump(data, f)  # serializing back to the original file
 
         return flask.Response(response=json.dumps(return_data), status=201)
+    
+#Testing app2 functions
+@app.route('/createUser', methods=['GET','POST'])
+def create_user():
+    data = request.form  # Retrieve form data
+
+    username = data.get("username")
+    password = data.get("password")
+
+    # Check if username already exists
+    for user in users:
+        if user == username:
+            response = {
+                'message': 'Username already exists. Please choose another username.'
+            }
+        else:
+            # Store user data in the list
+            users.append({"username": username, "password": password})
+            save_user_data()  # Save user data to the JSON file
+
+            response = {
+                'message': f'User "{username}" created successfully.'
+            }
+
+        return flask.jsonify(response)
 
 if __name__ == "__main__":
     app.run("localhost", 6969)
