@@ -5,9 +5,9 @@ This is the repository for Team Yellow's project during COLLABOTHON2023.
 Our project named Breazy is made with one main goal in mind, and that is to provide a solution to the at times problematic german bureaucracy.
 
 
-We aim to provide users with a smooth experience where all the necessary processes involving applying for appointments, sending documents and so on are all united in one place.
+We aim to provide users with a smooth experience where all the necessary processes involving completing transactions, uploading documents, receiving your desired documents and such are all united in one place.
 
-_In essence, it's Bureaucracy made Easy._
+_In essence, it's **B**u**r**eaucracy made **Easy**._
 
 
 ## Running the code
